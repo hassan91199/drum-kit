@@ -12,24 +12,20 @@ body {
 }
 
 .set-div {
-  height: 70%;
+  height: 75%;
 }
 
 .footer-div {
-  height: 10%;
+  height: 5%;
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 2rem;
   color: #DBEDF3;
   font-family: "Arvo", cursive;
   text-shadow: 3px 0 #DA0463;
 }
 
-footer {
-  color: #DBEDF3;
-  font-family: sans-serif;
-}
 
 .w {
   background-image: url("images/tom1.png");
@@ -59,22 +55,18 @@ footer {
   background-image: url("images/kick.png");
 }
 
-.set {
-  margin: 10% auto;
-}
-
 .pressed {
   box-shadow: 0 3px 4px 0 #DBEDF3;
   opacity: 0.5;
 }
 
-.red {
-  color: red;
+.button-col{
+  padding: 2%;
 }
 
 .drum {
   outline: none;
-  border: 10px solid #404B69;
+  border: 6px solid #404B69;
   font-size: 5rem;
   font-family: 'Arvo', cursive;
   line-height: 2;
@@ -82,10 +74,8 @@ footer {
   color: #DA0463;
   text-shadow: 3px 0 #DBEDF3;
   border-radius: 15px;
-  display: inline-block;
-  width: 150px;
-  height: 150px;
+  width: 105px;
+  height: 105px;
   text-align: center;
-  margin: 10px;
   background-color: white;
 }
