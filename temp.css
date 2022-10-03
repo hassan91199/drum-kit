@@ -1,25 +1,17 @@
-.drum {
-  border: 5px solid #404B69;
-  width: 100px;
-  height: 100px;
+
+.buttons-div {
+  height: 48vh;
+  width: 48vh;
 }
 
-h1 {
-  font-size: 2rem;
+.button-col {
+  height: 16vh;
 }
 
-.heading-div {
-  height: 20%;
+.title-text{
+  font-size: 12vh;
 }
 
-.set-div {
-  height: 75%;
-}
-
-.footer-div {
-  height: 5%;
-}
-
-.button-col{
-  padding: 2%;
+.footer-text{
+  font-size: 3vh;
 }

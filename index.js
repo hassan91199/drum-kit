@@ -1,14 +1,17 @@
 var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 
 for (var i = 0; i < numberOfDrumButtons; i++) {
+  // following conditional for showing or hiding keyboard buttons
+  if (window.innerWidth >= 1280) {
+    document.querySelectorAll(".drum")[i].innerHTML = document.querySelectorAll(".drum")[i].classList[0];
+
+  }
 
   document.querySelectorAll(".drum")[i].addEventListener("click", function() {
 
-    var buttonInnerHTML = this.innerHTML;
+    makeSound(this.classList[0]);
 
-    makeSound(buttonInnerHTML);
-
-    buttonAnimation(buttonInnerHTML);
+    buttonAnimation(this.classList[0]);
 
   });
 
@@ -24,7 +27,6 @@ document.addEventListener("keypress", function(event) {
 
 
 function makeSound(key) {
-
   switch (key) {
     case "w":
       var tom1 = new Audio("sounds/tom-1.mp3");
@@ -62,7 +64,8 @@ function makeSound(key) {
       break;
 
 
-    default: console.log(key);
+    default:
+      console.log(key);
 
   }
 }

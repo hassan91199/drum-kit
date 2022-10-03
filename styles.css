@@ -1,3 +1,26 @@
+/*
+This is a single view page(non scrollable) consisting of foundational container
+"main-div".
+"main-div" further consists of three divs(heading-div, set-div, footer-div)
+"heading-div" and "footer-div" are simple divs of height 15vh and 10vh
+respectivily.
+"set-div" is of height 75vh (its height is purposefully set to a multiple of 3
+because it will contain boxes of equal height and width) and width equal to
+main container
+
+"set-div" consists of "button-div" and 7 "button-cols"
+"button-div" is of equal height and width i.e. 75vh
+"button-col" is of height 25vh and width col-4 (also equal to 25vh) and
+contains drum buttons.
+
+On some screens (those which have height exceptionally more than width) the
+page does not looks good.
+So to tackle this we will be playing with height and width property of
+"buttons-div" and height property of "button-col"
+
+summary: responsiveness of page depends on total 4 selectors ".button-div",
+".button-col", ".title-text", ".footer-text"
+*/
 body {
   text-align: center;
   background-color: #283149;
@@ -8,51 +31,74 @@ body {
 }
 
 .heading-div {
-  height: 20%;
+  height: 15vh;
 }
 
 .set-div {
-  height: 75%;
+  height: 75vh;
+}
+
+.buttons-div {
+  height: 75vh;
+  width: 75vh;
+  padding: 0;
+}
+
+.button-col {
+  height: 25vh;
+  padding: 0;
 }
 
 .footer-div {
-  height: 5%;
+  height: 10vh;
 }
 
-h1 {
-  font-size: 2rem;
+.title-text, .footer-text {
   color: #DBEDF3;
   font-family: "Arvo", cursive;
   text-shadow: 3px 0 #DA0463;
 }
 
-
 .w {
   background-image: url("images/tom1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .a {
   background-image: url("images/tom2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .s {
   background-image: url("images/tom3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .d {
   background-image: url("images/tom4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .j {
   background-image: url("images/snare.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .k {
   background-image: url("images/crash.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .l {
   background-image: url("images/kick.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .pressed {
@@ -60,13 +106,11 @@ h1 {
   opacity: 0.5;
 }
 
-.button-col{
-  padding: 2%;
-}
-
 .drum {
-  outline: none;
-  border: 6px solid #404B69;
+  /* following height and width are responsible for padding also */
+  height: 90%;
+  width: 90%;
+  border: medium solid #404B69;
   font-size: 5rem;
   font-family: 'Arvo', cursive;
   line-height: 2;
@@ -74,8 +118,157 @@ h1 {
   color: #DA0463;
   text-shadow: 3px 0 #DBEDF3;
   border-radius: 15px;
-  width: 105px;
-  height: 105px;
   text-align: center;
   background-color: white;
+}
+
+/* Mobile S */
+@media screen and (min-width: 100px) {
+  .buttons-div {
+    height: 42vh;
+    width: 42vh;
+  }
+
+  .button-col {
+    height: 14vh;
+  }
+
+  .title-text {
+    font-size: 3rem;
+  }
+
+  .footer-text {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile M */
+@media screen and (min-width: 321px) {
+  .buttons-div {
+    height: 51vh;
+    width: 51vh;
+  }
+
+  .button-col {
+    height: 17vh;
+  }
+
+  .title-text {
+    font-size: 4rem;
+  }
+
+  .footer-text {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile L */
+@media screen and (min-width: 376px) {
+  .buttons-div {
+    height: 45vh;
+    width: 45vh;
+  }
+
+  .button-col {
+    height: 15vh;
+  }
+
+  .title-text {
+    font-size: 4.8rem;
+  }
+
+  .footer-text {
+    font-size: 1.7rem;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 426px) {
+  .buttons-div {
+    height: 72vh;
+    width: 72vh;
+  }
+
+  .button-col {
+    height: 24vh;
+  }
+
+  .title-text {
+    font-size: 5.5rem;
+  }
+
+  .footer-text {
+    font-size: 1.8rem;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 769px) {
+  .buttons-div {
+    height: 54vh;
+    width: 54vh;
+  }
+
+  .button-col {
+    height: 18vh;
+  }
+
+  .title-text {
+    font-size: 8rem;
+  }
+
+  .footer-text {
+    font-size: 2.7rem;
+  }
+}
+
+/* Nest Hub */
+@media screen and (min-width: 1023px) and (max-width: 1024px) {
+  .title-text {
+    font-size: 5rem;
+  }
+
+  .footer-text {
+    font-size: 1.7rem;
+  }
+}
+
+/* Laptop L */
+@media screen and (min-width: 1025px) {
+  .buttons-div {
+    height: 60vh;
+    width: 60vh;
+  }
+
+  .button-col {
+    height: 20vh;
+  }
+
+  .title-text {
+    font-size: 5rem;
+  }
+
+  .footer-text {
+    font-size: 1.6rem;
+  }
+}
+
+/* 4K */
+@media screen and (min-width: 1441px) {
+  .buttons-div {
+    height: 54vh;
+    width: 54vh;
+  }
+
+  .button-col {
+    height: 18vh;
+  }
+
+  .title-text {
+    font-size: 7.2rem;
+  }
+
+  .footer-text {
+    font-size: 2.4rem;
+  }
 }
